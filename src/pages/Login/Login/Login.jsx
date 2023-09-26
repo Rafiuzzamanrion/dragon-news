@@ -30,7 +30,7 @@ const Login = () => {
     }
 
     return (
-       <Container className='mx-auto w-25'>
+       <Container className='mx-auto w-25 mt-4 bg-body-secondary p-5 rounded'>
         <h3>Please login</h3>
          <Form onSubmit={handleSignIn}> 
       <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -46,13 +46,13 @@ const Login = () => {
       <Form.Group className="mb-3" controlId="formBasicCheckbox">
         <Form.Check type="checkbox" label="Check me out" />
       </Form.Group>
-      <Button variant="primary" type="submit">
+      <Button className='w-100 bg-dark my-4'  variant="primary" type="submit">
         Login
       </Button>
       <br />
-      <Form.Text className="text-secondary">
+      <Form.Text className="text-black">
     Don't have an account?
-         <Link className='text-decoration-none' to='/register'> Register</Link>
+         <Link className='text-decoration-none text-danger fw-bold' to='/register'> Register</Link>
         </Form.Text>
     <Form.Text className="text-success">
          

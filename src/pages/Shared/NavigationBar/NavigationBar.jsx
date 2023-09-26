@@ -18,26 +18,22 @@ const NavigationBar = () => {
 
     return (
        <Container>
-         <Navbar collapseOnSelect expand="lg" className="bg-body-secondary mt-4 rounded">
-      <Container>
+         <Navbar collapseOnSelect expand="lg" className="bg-body-secondary mt-4 rounded ">
+      <Container className=''>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="mx-auto">
-           
-              <Link className='text-decoration-none text-secondary' to='/'>Home</Link>
-              
-         
-            <Nav.Link href="#pricing">About</Nav.Link>
-            <Nav.Link href="#pricing">Career</Nav.Link>
-          
+          <Nav className="mx-auto ">
+              <Link className='text-decoration-none text-secondary mx-4 fw-semibold' to='/'>Home</Link>
+            <Link className='text-decoration-none text-secondary fw-semibold mx-4' to="#pricing">About</Link>
+            <Link className='text-decoration-none text-secondary fw-semibold mx-4' to="#pricing">Career</Link>
           </Nav>
           <Nav>
-            {user  && <FaUserCircle style={{fontSize:'2rem'}}></FaUserCircle>
+            {user  && <FaUserCircle className='text-dark' style={{fontSize:'2rem'}}></FaUserCircle>
            }
           
             {user?
-              <Button onClick={handleLogOut} variant="secondary">Log out</Button>:
-             <Link to="/login"> <Button variant="secondary">Login</Button></Link>}
+              <Button className='ms-4 bg-dark text-white' onClick={handleLogOut} variant="secondary">Log out</Button>:
+             <Link className='ms-4' to="/login"> <Button className='bg-dark text-white' variant="secondary">Login</Button></Link>}
           
           </Nav>
         </Navbar.Collapse>
